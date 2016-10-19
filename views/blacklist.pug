@@ -1,0 +1,25 @@
+
+html
+  head
+    title result
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+  link(href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css', rel='stylesheet')
+  style.
+    .container{
+      padding:20px 0 20px 0;
+    }
+  body
+    div.ui.container 
+      h2 Click on keyword to remove from blacklist
+      a(href=".") back
+      table.ui.single.line.table
+          thead
+              tr
+                  th Keyword
+          tbody
+              for x in obj
+                  tr
+                      td 
+                        a(target="_blank",href="blacklist?del="+x.key) #{x.key}
+      a(href=".") back
